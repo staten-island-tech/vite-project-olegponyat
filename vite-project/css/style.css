@@ -3,6 +3,8 @@
   --orange: #ff7730;
   --primary: var(--orange);
 
+
+
   --h1:7.594rem;
   --h2:5.063rem;
 }
@@ -10,8 +12,8 @@
   --primary: var(--orange);
 }
 .light{
-  --primary: var(var(--dark-blue))
+
 }
 body{
-  background-color: var(--dark-blue);
+  background-color: var(--orange);
 }
