@@ -5,15 +5,51 @@
 
 
 
-  --h1:7.594rem;
-  --h2:5.063rem;
+  --h1:9.683rem;
+  --h2:3.493rem;
+}
+html{
+  font-size: 10px;
 }
 .dark{
   --primary: var(--orange);
 }
 .light{
-
+  --primary: var(--dark-blue);
 }
 body{
   background-color: var(--orange);
+}
+
+.card-img{
+  width: 90%;
+}
+.card{
+  width: 27%;
+  height: 55vh;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(120,120,120,0.2);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  transition: 1.2s ease-in-out;
+  margin-bottom: 2%;
+  font-family: 'Playfair-Display' ;
+}
+.card-title{
+  font-size: 2.2rem;
+  text-transform: uppercase;
+
+}
+.card-desc{
+  font-size: 1.3rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+}
+#flexblox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
