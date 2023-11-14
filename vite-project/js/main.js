@@ -1,20 +1,35 @@
 import '../css/style.css'
 import { foodArray } from './menu'
 const DOMSelectors = {
-  microwaveCheckbox: document.querySelector('#microwaveCheckbox'),
+  microwaveCheckbox: document.querySelector('#microwaveables'),
   form: document.querySelector('#form-first'),
-  flexblaxs: document.querySelector('#flexblox')
+  flexblaxs: document.querySelector('#flexblox'),
+  cheapies: document.querySelector('#cheapables'),
 }
 
-const filteredList = foodArray.filter((microwave)=> microwave.microwave === false)
+const microwaveList = foodArray.filter((microwave)=> microwave.microwave === false)
+const cheapList = foodArray.filter((money)=> money.price < 5)
 
-DOMSelectors.form.addEventListener('submit', function(e){
+DOMSelectors.microwaveCheckbox.addEventListener('click', function(e){
   e.preventDefault();
-  function microwaveable(){
 
-      foodArray.forEach((poop)=>{
-        DOMSelectors.flexblaxs.insertAdjacentHTML('beforeend',`<div class=card><h2>${poop.name}</h2></div>`)
-      })
+  function microwaveable(){
+    DOMSelectors.flexblaxs.innerHTML = ''
+    microwaveList.forEach((poop)=>{
+      DOMSelectors.flexblaxs.insertAdjacentHTML('beforeend',`<div class=card><h2>${poop.name}</h2></div>`)
+    })
   }
-  microwaveable()
+  microwaveable();
 })
+DOMSelectors.cheapies.addEventListener('click', function(e){
+  e.preventDefault();
+
+  function cheap(){
+    DOMSelectors.flexblaxs.innerHTML = ''
+    cheapList.forEach((poop)=>{
+      DOMSelectors.flexblaxs.insertAdjacentHTML('beforeend',`<div class=card><h2>${poop.name}</h2></div>`)
+    })
+  }
+  cheap();
+})
+
