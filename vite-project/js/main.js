@@ -190,4 +190,4 @@ DOMSelectors.middleclass.addEventListener('click', function(e){
     })
   }
   middleclass();
-})
+})dd
