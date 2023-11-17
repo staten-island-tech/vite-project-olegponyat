@@ -12,7 +12,10 @@ const ButtonSelectors = {
     dinner: document.querySelector('#dinner'),
     middleclass: document.querySelector('#midpriced'),
     luxury: document.querySelector('#luxury'),
-    drink: document.querySelector('#drinks')
+    drink: document.querySelector('#drinks'),
+    appetizer:document.querySelector('#appetizers'),
+    main: document.querySelector('#mains'),
+    dip: document.querySelector('#dips')
 }
 
 export {DOMSelectors};

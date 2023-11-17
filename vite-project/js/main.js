@@ -4,7 +4,7 @@ import { DOMSelectors } from './selectors'
 import { ButtonSelectors } from './selectors'
 
 const filteredLists = {
-  microwaveList: foodArray.filter((microwave)=> microwave.microwaveable === false),
+  microwaveList: foodArray.filter((microwave)=> microwave.microwaveable === true),
   cheapList: foodArray.filter((money)=> money.price < 5),
   sideList: foodArray.filter((side)=> side.type === 'Side'),
   breakfastList: foodArray.filter((breakfast)=> breakfast.meal === 'Breakfast'),
@@ -12,7 +12,10 @@ const filteredLists = {
   dinnerList: foodArray.filter((dinner)=> dinner.meal === 'Dinner'),
   middleClassList: foodArray.filter((middleClass)=> middleClass.price >= 4.99 && middleClass.price <= 9.99),
   expensiveList: foodArray.filter((luxury)=>luxury.price >= 9.99),
-  drinkList: foodArray.filter((dink)=> dink.type === 'Drink')
+  drinkList: foodArray.filter((dink)=> dink.type === 'Drink'),
+  appetizersList: foodArray.filter((app)=> app.type === 'Appetizer'),
+  mainList: foodArray.filter((main)=> main.type === 'Main'),
+  dipList: foodArray.filter((dip)=> dip.type === 'Dip')
 }
 
 function microwaveableie(x){
@@ -62,3 +65,6 @@ completeList(ButtonSelectors.dinner,filteredLists.dinnerList)
 completeList(ButtonSelectors.middleclass,filteredLists.middleClassList)
 completeList(ButtonSelectors.luxury,filteredLists.expensiveList)
 completeList(ButtonSelectors.drink,filteredLists.drinkList)
+completeList(ButtonSelectors.appetizer,filteredLists.appetizersList)
+completeList(ButtonSelectors.main,filteredLists.mainList)
+completeList(ButtonSelectors.dip,filteredLists.dipList)
