@@ -3,16 +3,16 @@ import { foodArray } from './menu'
 import { DOMSelectors } from './selectors'
 import { ButtonSelectors } from './selectors'
 
-const filteredLists = [
-  {microwaveList: foodArray.filter((microwave)=> microwave.microwaveable === false)},
-  {cheapList: foodArray.filter((money)=> money.price < 5)},
-  {sideList: foodArray.filter((side)=> side.meal === 'Side')},
-  {breakfastList: foodArray.filter((breakfast)=> breakfast.meal === 'Breakfast')},
-  {lunchList: foodArray.filter((lunch)=> lunch.meal === 'Lunch')},
-  {dinnerList: foodArray.filter((dinner)=> dinner.meal === 'Dinner')},
-  {middleClassList: foodArray.filter((middleClass)=> middleClass.price >= 4.99 && middleClass.price <= 9.99)},
-  {expensiveList: foodArray.filter((luxury)=>luxury.price >= 9.99)},
-]
+const filteredLists = {
+  microwaveList: foodArray.filter((microwave)=> microwave.microwaveable === false),
+  cheapList: foodArray.filter((money)=> money.price < 5),
+  sideList: foodArray.filter((side)=> side.type === 'Side'),
+  breakfastList: foodArray.filter((breakfast)=> breakfast.meal === 'Breakfast'),
+  lunchList: foodArray.filter((lunch)=> lunch.meal === 'Lunch'),
+  dinnerList: foodArray.filter((dinner)=> dinner.meal === 'Dinner'),
+  middleClassList: foodArray.filter((middleClass)=> middleClass.price >= 4.99 && middleClass.price <= 9.99),
+  expensiveList: foodArray.filter((luxury)=>luxury.price >= 9.99),
+}
 
 function microwaveableie(x){
   if (x === true){
@@ -36,7 +36,8 @@ function completeList(btn,filteredList){
         const fart = microwaveableie(poop.microwaveable);
         DOMSelectors.flexblaxs.insertAdjacentHTML('beforeend',`
         <div class = card>
-          <div class="card-content">
+          <img src=${poop.img} class=card-img>
+          <div class=card-content>
             <h2 class=card-title>
               ${poop.name}
             </h2>
@@ -50,5 +51,13 @@ function completeList(btn,filteredList){
     global();
   })
 }
+completeList(ButtonSelectors.allbuh,foodArray)
+completeList(ButtonSelectors.breakfasts,filteredLists.breakfastList)
+completeList(ButtonSelectors.michaelwave,filteredLists.microwaveList)
+completeList(ButtonSelectors.cheapies,filteredLists.cheapList)
+completeList(ButtonSelectors.sides,filteredLists.sideList)
+completeList(ButtonSelectors.lunchies,filteredLists.lunchList)
+completeList(ButtonSelectors.dinner,filteredLists.dinnerList)
+completeList(ButtonSelectors.middleclass,filteredLists.middleClassList)
+completeList(ButtonSelectors.luxury,filteredLists.expensiveList)
 
-completeList(ButtonSelectors[4],filteredLists[0])
