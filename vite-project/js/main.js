@@ -12,6 +12,7 @@ const filteredLists = {
   dinnerList: foodArray.filter((dinner)=> dinner.meal === 'Dinner'),
   middleClassList: foodArray.filter((middleClass)=> middleClass.price >= 4.99 && middleClass.price <= 9.99),
   expensiveList: foodArray.filter((luxury)=>luxury.price >= 9.99),
+  drinkList: foodArray.filter((dink)=> dink.type === 'Drink')
 }
 
 function microwaveableie(x){
@@ -60,4 +61,4 @@ completeList(ButtonSelectors.lunchies,filteredLists.lunchList)
 completeList(ButtonSelectors.dinner,filteredLists.dinnerList)
 completeList(ButtonSelectors.middleclass,filteredLists.middleClassList)
 completeList(ButtonSelectors.luxury,filteredLists.expensiveList)
-
+completeList(ButtonSelectors.drink,filteredLists.drinkList)
