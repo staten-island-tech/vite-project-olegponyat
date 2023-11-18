@@ -1,6 +1,7 @@
 const DOMSelectors = {
     form: document.querySelector('#form-first'),
     flexblaxs: document.querySelector('#flexblox'),
+    cards: document.querySelectorAll('.card')
 }
 const ButtonSelectors = {
     allbuh: document.querySelector('#all'),
@@ -15,7 +16,8 @@ const ButtonSelectors = {
     drink: document.querySelector('#drinks'),
     appetizer:document.querySelector('#appetizers'),
     main: document.querySelector('#mains'),
-    dip: document.querySelector('#dips')
+    dip: document.querySelector('#dips'),
+    theme: document.querySelector('#theme')
 }
 
 export {DOMSelectors};

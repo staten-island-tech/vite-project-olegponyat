@@ -39,14 +39,14 @@ function completeList(btn,filteredList){
       filteredList.forEach((poop)=>{
         const fart = microwaveableie(poop.microwaveable);
         DOMSelectors.flexblaxs.insertAdjacentHTML('beforeend',`
-        <div class = card>
+        <div class=card>
           <img src=${poop.img} class=card-img>
           <div class=card-content>
             <h2 class=card-title>
               ${poop.name}
             </h2>
             <p class=card-desc>
-            ${poop.meal} for ${poop.price}  and this food is ${fart} microwaveable mmm yummy 🤤
+            ${poop.meal} for ${poop.price} and this food is ${fart} microwaveable mmm yummy 🤤
             </p>
           </div>
         </div>`)
@@ -55,6 +55,22 @@ function completeList(btn,filteredList){
     global();
   })
 }
+
+function theme(){
+  ButtonSelectors.theme.addEventListener('click', function(e){
+    e.preventDefault();
+    if(document.body.classList.contains('light')){
+      ButtonSelectors.theme.textContent = 'Dark Mode';
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
+    } else{
+      ButtonSelectors.theme.textContent = 'Light Mode';
+      document.body.classList.add('light')
+      document.body.classList.remove('dark');
+    }
+  })
+}
+theme()
 completeList(ButtonSelectors.allbuh,foodArray)
 completeList(ButtonSelectors.breakfasts,filteredLists.breakfastList)
 completeList(ButtonSelectors.michaelwave,filteredLists.microwaveList)
