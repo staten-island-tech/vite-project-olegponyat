@@ -46,7 +46,7 @@ function completeList(btn,filteredList){
               ${poop.name}
             </h2>
             <p class=card-desc>
-            ${poop.meal} for ${poop.price} and this food is ${fart} microwaveable mmm yummy 🤤
+            ${poop.meal} for $${poop.price} and this food is ${fart} microwaveable mmm yummy 🤤
             </p>
           </div>
         </div>`)
@@ -84,3 +84,7 @@ completeList(ButtonSelectors.drink,filteredLists.drinkList)
 completeList(ButtonSelectors.appetizer,filteredLists.appetizersList)
 completeList(ButtonSelectors.main,filteredLists.mainList)
 completeList(ButtonSelectors.dip,filteredLists.dipList)
+ButtonSelectors.clearfield.addEventListener('click',function(e){
+  e.preventDefault();
+  clear()
+})

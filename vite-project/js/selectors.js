@@ -17,7 +17,8 @@ const ButtonSelectors = {
     appetizer:document.querySelector('#appetizers'),
     main: document.querySelector('#mains'),
     dip: document.querySelector('#dips'),
-    theme: document.querySelector('#theme')
+    theme: document.querySelector('#theme'),
+    clearfield: document.querySelector('#clearfield')
 }
 
 export {DOMSelectors};
