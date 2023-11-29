@@ -60,17 +60,16 @@ DOMSelectors.buttons.forEach((btn)=>{
   btn.addEventListener('click',function(e){
     e.preventDefault();
     function buttocks(){
-      let buttock = btn.textContent
-      console.log(buttock)
+      const buttock = btn.textContent
+      console.log(buttock.toLowerCase())
+    }   
+   buttocks() 
     }
-    buttocks()
-  })
-})
-  
+  )})
+
 
 function theme(){
   ButtonSelectors.theme.addEventListener('click', function(e){
-    e.preventDefault();
     if(document.body.classList.contains('light')){
       ButtonSelectors.theme.textContent = 'Dark Mode';
       document.body.classList.add('dark');
@@ -83,19 +82,7 @@ function theme(){
   })
 }
 theme()
-completeList(ButtonSelectors.allbuh,foodArray)
-completeList(ButtonSelectors.breakfasts,filteredLists.breakfastList)
-completeList(ButtonSelectors.michaelwave,filteredLists.microwaveList)
-completeList(ButtonSelectors.cheapies,filteredLists.cheapList)
-completeList(ButtonSelectors.sides,filteredLists.sideList)
-completeList(ButtonSelectors.lunchies,filteredLists.lunchList)
-completeList(ButtonSelectors.dinner,filteredLists.dinnerList)
-completeList(ButtonSelectors.middleclass,filteredLists.middleClassList)
-completeList(ButtonSelectors.luxury,filteredLists.expensiveList)
-completeList(ButtonSelectors.drink,filteredLists.drinkList)
-completeList(ButtonSelectors.appetizer,filteredLists.appetizersList)
-completeList(ButtonSelectors.main,filteredLists.mainList)
-completeList(ButtonSelectors.dip,filteredLists.dipList)
+
 ButtonSelectors.clearfield.addEventListener('click',function(e){
   e.preventDefault();
   clear()
