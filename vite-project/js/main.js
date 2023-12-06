@@ -56,21 +56,7 @@ function completeList(btn,filteredList){
   })
 }
 
-<<<<<<< HEAD
-DOMSelectors.buttons.forEach((btn)=>{
-  btn.addEventListener('click',function(e){
-    e.preventDefault();
-    function buttocks(){
-      const buttock = btn.textContent
-      console.log(buttock.toLowerCase())
-    }   
-   buttocks() 
-    }
-  )})
 
-
-=======
->>>>>>> parent of 46bd6b9 (mm)
 function theme(){
   ButtonSelectors.theme.addEventListener('click', function(e){
     if(document.body.classList.contains('light')){
