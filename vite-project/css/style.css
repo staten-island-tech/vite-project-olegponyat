@@ -14,7 +14,6 @@ body{
   background-color: var(--white);
   transition: all .3s;
 }
-
 .light{
   background-color: var(--white);
 }

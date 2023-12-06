@@ -1,8 +1,7 @@
 const DOMSelectors = {
     form: document.querySelector('#form-first'),
     flexblaxs: document.querySelector('#flexblox'),
-    cards: document.querySelectorAll('.card'),
-    buttons: document.querySelectorAll('.white')
+    cards: document.querySelectorAll('.card')
 }
 const ButtonSelectors = {
     allbuh: document.querySelector('#all'),

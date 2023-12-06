@@ -8,7 +8,7 @@ const filteredLists = {
   cheapList: foodArray.filter((money)=> money.price < 5),
   sideList: foodArray.filter((side)=> side.type === 'Side'),
   breakfastList: foodArray.filter((breakfast)=> breakfast.meal === 'Breakfast'),
-  lunchList: foodArray.filter((lunch)=> lunch.meal === 'Luncdch'),
+  lunchList: foodArray.filter((lunch)=> lunch.meal === 'Lunch'),
   dinnerList: foodArray.filter((dinner)=> dinner.meal === 'Dinner'),
   middleClassList: foodArray.filter((middleClass)=> middleClass.price >= 4.99 && middleClass.price <= 9.99),
   expensiveList: foodArray.filter((luxury)=>luxury.price >= 9.99),
@@ -36,17 +36,17 @@ function completeList(btn,filteredList){
     clear();
     
     function global(){
-      filteredList.forEach((item)=>{
-        const tuberculosis = microwaveableie(item.microwaveable);
+      filteredList.forEach((poop)=>{
+        const fart = microwaveableie(poop.microwaveable);
         DOMSelectors.flexblaxs.insertAdjacentHTML('beforeend',`
         <div class=card>
-          <img src=${item.img} class=card-img>
+          <img src=${poop.img} class=card-img>
           <div class=card-content>
             <h2 class=card-title>
-              ${item.name}
+              ${poop.name}
             </h2>
             <p class=card-desc>
-            ${item.meal} for $${item.price} and this food is ${tuberculosis} microwaveable mmm yummy 🤤
+            ${poop.meal} for $${poop.price} and this food is ${fart} microwaveable mmm yummy 🤤
             </p>
           </div>
         </div>`)
@@ -56,6 +56,7 @@ function completeList(btn,filteredList){
   })
 }
 
+<<<<<<< HEAD
 DOMSelectors.buttons.forEach((btn)=>{
   btn.addEventListener('click',function(e){
     e.preventDefault();
@@ -68,6 +69,8 @@ DOMSelectors.buttons.forEach((btn)=>{
   )})
 
 
+=======
+>>>>>>> parent of 46bd6b9 (mm)
 function theme(){
   ButtonSelectors.theme.addEventListener('click', function(e){
     if(document.body.classList.contains('light')){
