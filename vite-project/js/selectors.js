@@ -4,7 +4,7 @@ const DOMSelectors = {
     cards: document.querySelectorAll('.card')
 }
 const ButtonSelectors = {
-    allbuh: document.querySelector('#all'),
+    all: document.querySelector('#all'),
     microwave: document.querySelector('#microwaveables'),
     cheap: document.querySelector('#cheapables'),
     side: document.querySelector('#sides'),
