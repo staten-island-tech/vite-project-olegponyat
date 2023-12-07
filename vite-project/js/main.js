@@ -55,7 +55,7 @@ function completeList(btn,filteredList){
     global();
   })
 }
-
+console.log(ButtonSelectors.middle)
 completeList(ButtonSelectors.all,foodArray)
 completeList(ButtonSelectors.breakfast,filteredLists.breakfastList)
 completeList(ButtonSelectors.microwave,filteredLists.microwaveList)
