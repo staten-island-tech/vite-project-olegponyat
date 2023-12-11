@@ -55,6 +55,32 @@ function completeList(btn,filteredList){
     global();
   })
 }
+console.log(ButtonSelectors.middle)
+completeList(ButtonSelectors.all,foodArray)
+completeList(ButtonSelectors.breakfast,filteredLists.breakfastList)
+completeList(ButtonSelectors.microwave,filteredLists.microwaveList)
+completeList(ButtonSelectors.cheap,filteredLists.cheapList)
+completeList(ButtonSelectors.side,filteredLists.sideList)
+completeList(ButtonSelectors.lunch,filteredLists.lunchList)
+completeList(ButtonSelectors.dinner,filteredLists.dinnerList)
+completeList(ButtonSelectors.middle,filteredLists.middleClassList)
+completeList(ButtonSelectors.luxury,filteredLists.expensiveList)
+completeList(ButtonSelectors.drink,filteredLists.drinkList)
+completeList(ButtonSelectors.appetizer,filteredLists.appetizersList)
+completeList(ButtonSelectors.main,filteredLists.mainList)
+completeList(ButtonSelectors.dip,filteredLists.dipList)
+
+/* 
+DOMSelectors.buttons.forEach((btn)=>{
+  btn.addEventListener('click',function(e){
+    e.preventDefault();
+    function buttocks(){
+      const buttock = btn.textContent
+      console.log(buttock)
+    }   
+   buttocks() 
+    }
+  )}) */
 
 DOMSelectors.buttons.forEach((btn)=>{
   btn.addEventListener('click',function(e){
